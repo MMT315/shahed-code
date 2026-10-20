@@ -2253,7 +2253,7 @@ html[data-theme="light"] .modal {
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h14m-5.5-5.5L18.5 12 13 17.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="i-award" viewBox="0 0 24 24"><path d="m7.2 13.6-1.1 7.2 5-2.7 5 2.7-1.1-7.2" fill="currentColor" opacity=".18"/><path d="m7.2 13.6-1.1 7.2 5-2.7 5 2.7-1.1-7.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="7.1" fill="currentColor" opacity=".12"/><circle cx="12" cy="9" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9" r="4.5" fill="none" stroke="currentColor" stroke-width=".9" opacity=".65"/><path d="m12 5.6 1 2 2.2.3-1.6 1.5.4 2.2-2-1.1-2 1.1.4-2.2-1.6-1.5 2.2-.3 1-2Z" fill="currentColor" stroke="currentColor" stroke-width=".35" stroke-linejoin="round"/></symbol>
-<symbol id="i-" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="6" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="19" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m8.4 10.8 7.2-4.4m-7.2 7 7.2 4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="6" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="19" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m8.4 10.8 7.2-4.4m-7.2 7 7.2 4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
 <symbol id="i-run" viewBox="0 0 24 24"><path d="M7 4.8v14.4L19 12 7 4.8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4 3.5v17" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55"/></symbol>
 <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3.5v11m-4.5-4.2L12 14.8l4.5-4.5M4.5 17v3h15v-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8.5 4H4v4.5M15.5 4H20v4.5M4 15.5V20h4.5M20 15.5V20h-4.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -2415,9 +2415,8 @@ html[data-theme="light"] .modal {
     </div>
     <div class="modal-body">
       <p class="profile-desc">شاهد کد یک دستیار هوشمند برای یادگیری برنامه‌نویسی، بررسی کد، اجرای نمونه‌ها و ساخت بازی‌های تحت وب است. می‌توانی از آن برای یادگیری مرحله‌به‌مرحله و توسعه پروژه‌های خودت کمک بگیری.</p>
-      <div class="telemetry-consent" style="margin:14px 0;padding:12px;border:1px solid var(--border);border-radius:14px;background:var(--surface-soft,rgba(127,127,127,.06));display:flex;gap:10px;align-items:flex-start">
-        <input id="telemetryConsent" type="checkbox" style="width:18px;height:18px;flex:0 0 auto;margin-top:3px;accent-color:var(--accent)" />
-        <label for="telemetryConsent" style="font-size:12px;line-height:1.8;cursor:pointer">اجازهٔ ارسال متن گفتگو برای بهبود کیفیت (اختیاری). با فعال‌کردن، متن پیام من و پاسخ شاهد کد و پرامپت بازی برای مدیر ارسال می‌شود. آمار فنی و شمارش بازدید جداگانه ثبت می‌شود. هر زمان می‌توانی این اجازه را لغو کنی.</label>
+      <div class="telemetry-notice" role="note" style="margin:14px 0;padding:12px;border:1px solid var(--border);border-radius:14px;background:var(--surface-soft,rgba(127,127,127,.06));font-size:12px;line-height:1.9">
+        <strong>اطلاعیهٔ حریم خصوصی:</strong> برای امنیت و بررسی سوءاستفاده، متن پیام‌های ارسالی، پاسخ‌های هوش مصنوعی و درخواست‌های ساخت بازی ممکن است به‌طور کامل ثبت و توسط مدیر بررسی شود. لطفاً اطلاعات حساس مانند رمز عبور، کدهای ورود و اطلاعات بانکی را وارد نکن.
       </div>
       <div class="feature-grid">
         <div class="feature-item"><svg><use href="#i-code"/></svg>آموزش کدنویسی</div>
@@ -2543,6 +2542,7 @@ var CONFIG = {
   API_URL: "https://shahed-ai.game-m-m-t-s0.workers.dev/",
   TRACK_URL: "https://shahed-ai.game-m-m-t-s0.workers.dev/track",
   MODEL: "gpt-6-luna",
+  VERSION: "24.0.0",
   FALLBACK_MODELS: ["gpt-6-luna", "gpt-4o-mini", "gapgpt-gemma-26b-a4b"],
   MAX_HISTORY: 8,
   MAX_TOKENS_CHAT: 3000,
@@ -2865,16 +2865,16 @@ function getDeviceInfo() {
   return { device: device, browser: browser, os: osName };
 }
 
-function hasTelemetryConsent() {
-  try { return localStorage.getItem("shahedcode_telemetry_consent_v22") === "true"; }
-  catch (e) { return false; }
+function isLoggingEnabled() {
+  // Logging is always enabled and disclosed in the static profile privacy notice.
+  return true;
 }
 
 function track(data) {
   if (!CONFIG.TRACK_URL || !state.visitorId) return Promise.resolve(null);
   var payload = Object.assign({
     visitorId: state.visitorId,
-    consent: hasTelemetryConsent(),
+    loggingEnabled: isLoggingEnabled(),
     userAgent: navigator.userAgent || "",
     url: location.href,
     language: navigator.language || "",
@@ -2917,26 +2917,21 @@ function trackHeartbeat() {
 }
 
 function trackMessage(userMessage, botReply) {
+  // The Worker records the exact request and upstream response as one audit event.
+  // Keep only a local counter here to avoid sending duplicate transcript reports.
   state.messageCount = (Number(readStorage(CONFIG.KEYS.MSGCOUNT, 0)) || 0) + 1;
   writeStorage(CONFIG.KEYS.MSGCOUNT, state.messageCount);
-  var data = { type: "message", action: "assistant_reply_completed", messageCount: state.messageCount,
-    promptCharacters: String(userMessage || "").length, replyCharacters: String(botReply || "").length };
-  if (hasTelemetryConsent()) {
-    data.userMessage = String(userMessage || "").slice(0, 12000);
-    data.botReply = String(botReply || "").slice(0, 20000);
-  }
-  track(data);
 }
 
 function trackGame(prompt, title, size, duration) {
   var data = { type: "game", action: "game_generated", htmlSizeKB: Number(size) || 0,
     durationMs: Number(duration) || 0, gameTitle: String(title || "").slice(0,150) };
-  if (hasTelemetryConsent()) data.userPrompt = String(prompt || "").slice(0,12000);
+  data.userPrompt = String(prompt || "").slice(0,100000);
   track(data);
 }
 
-function trackError(error) {
-  track({ type: "error", action: "client_error", error: String(error || "").slice(0, 800) });
+function trackError(error, userMessage) {
+  track({ type: "error", action: "client_error", error: String(error || "").slice(0, 3000), userMessage: String(userMessage || "").slice(0, 100000) });
 }
 
 function loadTheme() {
@@ -3659,7 +3654,16 @@ async function streamChat(messages, maxTokens, onDelta, onDone, onError, externa
           messages: messages,
           temperature: 0.7,
           max_tokens: maxTokens,
-          stream: false
+          stream: false,
+          clientTelemetry: {
+            visitorId: state.visitorId || "",
+            language: navigator.language || "",
+            screen: screen.width + "x" + screen.height,
+            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone || ""),
+            platform: navigator.platform || "",
+            connection: navigator.connection ? (navigator.connection.effectiveType || "") : "",
+            online: navigator.onLine
+          }
         }),
         signal: controller.signal
       });
@@ -3925,7 +3929,7 @@ async function sendToAPI(userText, options) {
     });
     errorNode.appendChild(retry);
     if (!wasCancelled) {
-      trackError(error.message || error);
+      trackError(error.message || error, originalUser);
       if (!options.regen) persistMessage("assistant", "خطا: " + String(error.message || error));
     }
   } finally {
@@ -4446,7 +4450,7 @@ async function buildGame(promptText) {
       toast("ساخت بازی لغو شد.");
     } else {
       toast("ساخت بازی ناموفق بود: " + (error.message || "خطای ناشناخته"));
-      trackError(error.message || error);
+      trackError(error.message || error, prompt);
     }
     hideModal("gameBuildBack");
   } finally {
@@ -4758,15 +4762,6 @@ function clearActiveChat() {
 }
 
 function wireUI() {
-  var consentBox = byId("telemetryConsent");
-  if (consentBox) {
-    consentBox.checked = hasTelemetryConsent();
-    consentBox.addEventListener("change", function () {
-      try { localStorage.setItem("shahedcode_telemetry_consent_v22", consentBox.checked ? "true" : "false"); } catch (e) {}
-      track({ type: "consent", action: "conversation_telemetry_consent", outcome: consentBox.checked ? "enabled" : "disabled" });
-      toast(consentBox.checked ? "اجازهٔ ارسال متن گفتگو فعال شد." : "ارسال متن گفتگو غیرفعال شد.");
-    });
-  }
   wireGameRuntimeBridge();
   byId("menuBtn").addEventListener("click", toggleSidebar);
   byId("sidebarCloseBtn").addEventListener("click", closeSidebar);
@@ -4851,7 +4846,7 @@ function wireUI() {
   byId("shareBtn").addEventListener("click", async function () {
     // Share a real HTTP(S) URL only. Local content:// previews are not valid invite links.
     var isWebURL = location.protocol === "https:" || location.protocol === "http:";
-    var shareURL = isWebURL ? location.href.split("#")[0] : "https://shahedcode.pages.dev";
+    var shareURL = isWebURL ? location.href.split("#")[0] : "https://github.com/mmt315/Shahedcode";
     var shareData = {
       title: "شاهد کد | Shahedcode",
       text: "شاهد کد؛ دستیار هوشمند برنامه‌نویسی شاهدوب. برای یادگیری و ساخت پروژه‌های وب همراه شو:",
