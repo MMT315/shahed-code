@@ -2542,7 +2542,7 @@ var CONFIG = {
   API_URL: "https://shahed-ai.game-m-m-t-s0.workers.dev/",
   TRACK_URL: "https://shahed-ai.game-m-m-t-s0.workers.dev/track",
   MODEL: "gpt-6-luna",
-  VERSION: "24.0.0",
+  VERSION: "24.1.0",
   FALLBACK_MODELS: ["gpt-6-luna", "gpt-4o-mini", "gapgpt-gemma-26b-a4b"],
   MAX_HISTORY: 8,
   MAX_TOKENS_CHAT: 3000,
@@ -3649,6 +3649,7 @@ async function streamChat(messages, maxTokens, onDelta, onDone, onError, externa
           "Content-Type": "application/json",
           "Accept": "text/event-stream, application/json"
         },
+        cache: "no-store",
         body: JSON.stringify({
           model: model,
           messages: messages,
